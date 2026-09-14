@@ -19,7 +19,7 @@ gender = st.selectbox("Gender", ["Male", "Female"])
 married = st.selectbox("Married", ["Yes", "No"])
 dependents = st.selectbox("Dependents", ["0", "1", "2", "3+"])
 education = st.selectbox("Education", ["Graduate", "Not Graduate"])
-employment = st.selectbox("Employment", ["Self-Employed", "Unemployed", "salaried"])
+employment = st.selectbox("Employment Status", ["Self-Employed", "Unemployed", "salaried"])
 
 applicant_income = st.number_input(
     "Applicant Income", min_value=0, value=50000
@@ -54,7 +54,7 @@ if st.button("Predict Loan Approval"):
         "Married": [married],
         "Dependents": [dependents],
         "Education": [education],
-        "Employment": [self_employed],
+        "Employment": [Employment Status],
         "ApplicantIncome": [applicant_income],
         "CoapplicantIncome": [coapplicant_income],
         "LoanAmount": [loan_amount],
